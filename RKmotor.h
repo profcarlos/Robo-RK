@@ -106,7 +106,7 @@ void mover(int dist, int vel) {
      fica em espera ocupada até terminar o movimento comandado (aguarda contagem de furos do encoder)
      Diâmetro da roda: 6,65 cm
      const float circunf = 3.1415 * 6.65 = 20.9; */
-  int furos = FLOAT2INT(abs(dist)*20/20.9); 
+  int furos = FLOAT2INT(abs(dist)*20*2.666/20.9)-20; 
   
   if (furos < 20) furos = 21;                   // acionamento mínimo de 1 volta = 20 furos
   furosA = furosB = furos;
